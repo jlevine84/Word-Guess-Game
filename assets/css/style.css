@@ -1,0 +1,67 @@
+.heading {
+    border: solid black 2px;
+    height: 70px;
+}
+
+.maindisplay {
+    border: solid blue 2px;
+    height: calc(100vh - 100px);
+    overflow: auto;
+}
+
+.gamehud {
+    border: solid yellow 2px;
+    height: 60%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#r1 {
+    height: 100%;
+}
+
+.gameinfo {
+    border: solid red 2px;
+    background: red;
+    height: 100%;
+}
+
+.gamedisplay {
+    border: solid grey 2px;
+    background: grey;
+    height: 100%;
+}
+
+.hangman {
+    border: solid blue 2px;
+}
+
+.theword {
+    border: solid black 2px;
+}
+
+.usedletters {
+    border: solid green 2px;
+    background: green;
+    height: 100%;
+}
+
+.keyboard {
+    border: solid orange 2px;
+    height: 40%;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#toprow, #middlerow, #bottomrow {
+    height: 33.33%;
+    border: black 1px dotted;
+}
+
+.footing {
+    border: solid pink 2px;
+    height: 35px;
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+}
