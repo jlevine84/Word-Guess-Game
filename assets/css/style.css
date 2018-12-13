@@ -1,19 +1,26 @@
 .heading {
     border: solid black 2px;
-    height: 70px;
+    height: 60px;
+    background-image: linear-gradient(black, rgb(54, 52, 52), black);
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    color: #ffffff;
+    padding-top: 10px;
 }
 
 .maindisplay {
-    border: solid blue 2px;
     height: calc(100vh - 100px);
     overflow: auto;
+    background: black;
 }
 
 .gamehud {
-    border: solid yellow 2px;
     height: 60%;
     margin-top: 15px;
     margin-bottom: 15px;
+    font-family: 'Press Start 2P', cursive;
+    color: #ffffff;
+
 }
 
 #r1 {
@@ -21,15 +28,16 @@
 }
 
 .gameinfo {
-    border: solid red 2px;
-    background: red;
+    background: url("../images/Monitor.png");
+    background-size: 100% 100%;
     height: 100%;
 }
 
 .gamedisplay {
-    border: solid grey 2px;
-    background: grey;
+    background: url("../images/Monitor.png");
+    background-size: 100% 100%;
     height: 100%;
+    text-align: center;
 }
 
 .hangman {
@@ -37,29 +45,49 @@
 }
 
 .theword {
-    border: solid black 2px;
+    border: solid yellow 2px;
 }
 
 .usedletters {
-    border: solid green 2px;
-    background: green;
+    background: url("../images/Monitor.png");
+    background-size: 100% 100%;
     height: 100%;
 }
 
 .keyboard {
-    border: solid orange 2px;
     height: 40%;
     margin-bottom: 15px;
     text-align: center;
+    background: black;
 }
 
 #toprow, #middlerow, #bottomrow {
     height: 33.33%;
-    border: black 1px dotted;
+    background: #444444;
+    font-size: 24px;
+    line-height: 46px;
+    color: #ffffff;
+}
+
+#middlerow {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#bottomrow {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#qkey, #wkey, #ekey, #rkey, #tkey, #ykey,
+#ukey, #ikey, #okey, #pkey, #akey, #skey,
+#dkey, #fkey, #gkey, #hkey, #jkey, #kkey,
+#lkey, #zkey, #xkey, #ckey, #vkey, #bkey, #nkey, #mkey {
+    border: solid rgb(22, 22, 22) 1px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .footing {
-    border: solid pink 2px;
     height: 35px;
     position: fixed;
     bottom: 0px;
