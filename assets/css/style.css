@@ -101,6 +101,11 @@ h2 {
 #lkey, #zkey, #xkey, #ckey, #vkey, #bkey, #nkey, #mkey {
     border: solid rgb(22, 22, 22) 1px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+
+.key:hover {
+    cursor: pointer;
 }
 
 .footing {
