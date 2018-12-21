@@ -28,14 +28,14 @@ function newGame() {  //Resets the interface for a new game.
         answerArray[a] = "_";
     }
     document.getElementById("theword").innerHTML = answerArray.join(" ");
-    document.getElementById("guesses").innerHTML = usedLetters;
+    document.getElementById("usedLs").innerHTML = usedLetters;
     document.getElementById("pguesses").innerHTML = guesses;
 }
 
 function fauxboardCheck(guess) { //function to check html keyboard
     guessTicker = 0;
     usedLetters.push(guess);
-    document.getElementById("guesses").innerHTML = usedLetters;
+    document.getElementById("usedLs").innerHTML = usedLetters;
     for (i = 0; i < randWord.length; i++) { //Checks random word for correct answers
         if (randWord[i] === guess) {
             answerArray[i] = guess;
@@ -198,8 +198,7 @@ document.onkeyup = function(event){
     guessTicker = 0;
     if (event.keyCode >= 65 && event.keyCode <= 90){
         usedLetters.push(guess);
-        $("#guesses").append(usedLetters);
-        document.getElementById("guesses").innerHTML = usedLetters;
+        document.getElementById("usedLs").innerHTML = usedLetters;
          
         for (i = 0; i < randWord.length; i++) { //Checks random word for correct answers
             if (randWord[i] === guess) {
@@ -216,6 +215,7 @@ document.onkeyup = function(event){
                 }
             }
         }
+        
         if (guessTicker <= 0) { //Checks to see if an answer was in the word array if not then incorrect guess is logged.
             guesses--;
             document.getElementById("pguesses").innerHTML = guesses;
