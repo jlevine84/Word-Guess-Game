@@ -38,6 +38,10 @@ h2 {
     height: 100%;
 }
 
+#instructions {
+    font-size: 12px;
+}
+
 .gamedisplay {
     background: url("../images/Monitor.png");
     background-size: 100% 100%;
@@ -54,6 +58,12 @@ h2 {
     left: 5%;
 }
 
+#hangmanImg {
+    width: 50%;
+    height: 75%;
+
+}
+
 .theword {
     height: 20%;
     width: 90%;
@@ -68,6 +78,11 @@ h2 {
     height: 100%;
     width: 100%;
     overflow: wrap;
+}
+
+.guesses {
+    width: 95%;
+    height: 50%;
 }
 
 .keyboard {

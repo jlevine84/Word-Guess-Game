@@ -26,22 +26,22 @@
                     <div class="row" id="r1">
                         <div class="col-3 gameinfo">
                             <p><br><br>Instructions:</p>
-                            <p>Guess a letter to uncover the hidden word!</p>
-                            <p><br><br>Wins: <var id="pwins"></var></p>
-                            <p>Loses: <var id="ploses"></var></p>
-                            <p>Guesses Remaining: <var id="pguesses"></var></p>
+                            <p id="instructions">Guess a letter to uncover the hidden word!</p>
+                            <p id="instructions"><br><br>Wins: <var id="pwins"></var></p>
+                            <p id="instructions">Loses: <var id="ploses"></var></p>
+                            <p id="instructions">Guesses Remaining: <var id="pguesses"></var></p>
                             
                         </div>
                         <div class="col-6 gamedisplay">
                             <div class="row">
-                                <div class="col hangman"><br><br>Press Any Key to Start!</div>
+                                <div class="col hangman"><br><br>Press Any Key to play!<br><img src="assets/images/Hangman7.png" id="hangmanImg"></div>
                                 <div class="w-100"></div>
                                 <div class="col theword"><br><br><var id="theword"></var></div>
                             </div>
                         </div>
                         <div class="col-3 usedletters"><p><br><br>Used Letters: </p>
                             <div class="row"></div>
-                            <div class="col"><br><var id="guesses"></var></div>
+                            <div class="col guesses"><br><div id="guesses"></div></div>
                         </div>    
                     </div>
                 </div>

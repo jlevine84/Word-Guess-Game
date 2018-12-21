@@ -46,6 +46,7 @@ function fauxboardCheck(guess) { //function to check html keyboard
                 wins++;
                 document.getElementById("pwins").innerHTML = wins;
                 alert("Congratulations! You've won! The word was: " + randWord + "!");
+                hangman.attr("src", "assets/images/HangmanWin.png");
                 newGame();
             }
         }
@@ -53,11 +54,23 @@ function fauxboardCheck(guess) { //function to check html keyboard
     if (guessTicker <= 0) { //Checks to see if an answer was in the word array if not then incorrect guess is logged.
         guesses--;
         document.getElementById("pguesses").innerHTML = guesses;
-
-        if (guesses === 0) {
+        if (guesses === 6) {
+            hangman.attr("src", "assets/images/Hangman1.png");
+        } else if (guesses === 5) {
+            hangman.attr("src", "assets/images/Hangman2.png");
+        } else if (guesses === 4) {
+            hangman.attr("src", "assets/images/Hangman3.png");
+        } else if (guesses === 3) {
+            hangman.attr("src", "assets/images/Hangman4.png");
+        } else if (guesses === 2) {
+            hangman.attr("src", "assets/images/Hangman5.png");
+        } else if (guesses === 1) {
+            hangman.attr("src", "assets/images/Hangman6.png");
+        } else if (guesses === 0) {
             alert("GAME OVER! Sorry you didn't guess the word! The word was: " + randWord + ".");
             loses++;
             document.getElementById("ploses").innerHTML = loses;
+            hangman.attr("src", "assets/images/Hangman7.png");
             newGame();
         }
     }
@@ -70,6 +83,7 @@ window.onload = function loadDisplay(){
     document.getElementById("ploses").innerHTML = loses;
     document.getElementById("pguesses").innerHTML = guesses;
     document.getElementById("theword").innerHTML = answerArray.join(" ");
+    hangman = $("#hangmanImg")
 
     //on click of the "keyboard" key, run the same check as on the real keyboard.
     $("#qkey").on("click", function() {
@@ -184,7 +198,9 @@ document.onkeyup = function(event){
     guessTicker = 0;
     if (event.keyCode >= 65 && event.keyCode <= 90){
         usedLetters.push(guess);
+        $("#guesses").append(usedLetters);
         document.getElementById("guesses").innerHTML = usedLetters;
+         
         for (i = 0; i < randWord.length; i++) { //Checks random word for correct answers
             if (randWord[i] === guess) {
                 answerArray[i] = guess;
@@ -195,6 +211,7 @@ document.onkeyup = function(event){
                     wins++;
                     document.getElementById("pwins").innerHTML = wins;
                     alert("Congratulations! You've won! The word was: " + randWord + "!");
+                    hangman.attr("src", "assets/images/HangmanWin.png");
                     newGame();
                 }
             }
@@ -202,11 +219,24 @@ document.onkeyup = function(event){
         if (guessTicker <= 0) { //Checks to see if an answer was in the word array if not then incorrect guess is logged.
             guesses--;
             document.getElementById("pguesses").innerHTML = guesses;
-
-            if (guesses === 0) {
+            //images input
+            if (guesses === 6) {
+                hangman.attr("src", "assets/images/Hangman1.png");
+            } else if (guesses === 5) {
+                hangman.attr("src", "assets/images/Hangman2.png");
+            } else if (guesses === 4) {
+                hangman.attr("src", "assets/images/Hangman3.png");
+            } else if (guesses === 3) {
+                hangman.attr("src", "assets/images/Hangman4.png");
+            } else if (guesses === 2) {
+                hangman.attr("src", "assets/images/Hangman5.png");
+            } else if (guesses === 1) {
+                hangman.attr("src", "assets/images/Hangman6.png");
+            } else if (guesses === 0) {
                 alert("GAME OVER! Sorry you didn't guess the word! The word was: " + randWord + ".");
                 loses++;
                 document.getElementById("ploses").innerHTML = loses;
+                hangman.attr("src", "assets/images/Hangman7.png");
                 newGame();
             }
         }
