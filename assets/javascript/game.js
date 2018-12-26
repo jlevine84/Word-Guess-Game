@@ -4,8 +4,6 @@ var guesses = 7;
 var usedLetters = [];
 var guessTicker = 0;
 
-
-
 //Set array for possible words and sets a random word to guess. Also sets the Answer Array to display for the user.
 var theWords = ["centipede", "defender", "pacman", "galaga", "burgertime", "qbert", "gauntlet", "battlezone", "asteroids", "frogger", "tetris", "joust", "tempest", "rampage"];
 var randWord = theWords[Math.floor(Math.random() * theWords.length)];
@@ -84,6 +82,17 @@ window.onload = function loadDisplay(){
     document.getElementById("pguesses").innerHTML = guesses;
     document.getElementById("theword").innerHTML = answerArray.join(" ");
     hangman = $("#hangmanImg")
+
+    var audioElement = document.createElement("audio");
+    audioElement.setAttribute("src", "assets/music/01.mp3");
+
+    $("#play").on("click", function() {
+        audioElement.play();
+    });
+    
+    $("#pause").on("click", function() {
+        audioElement.pause();
+    });
 
     //on click of the "keyboard" key, run the same check as on the real keyboard.
     $("#qkey").on("click", function() {
@@ -189,6 +198,8 @@ window.onload = function loadDisplay(){
     $("#mkey").on("click", function() {
         fauxboardCheck("m");
     });
+
+
 
 };
 
