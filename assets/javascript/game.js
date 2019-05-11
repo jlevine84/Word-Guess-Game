@@ -5,7 +5,11 @@ var usedLetters = [];
 var guessTicker = 0;
 
 //Set array for possible words and sets a random word to guess. Also sets the Answer Array to display for the user.
-var theWords = ["centipede", "defender", "pacman", "galaga", "burgertime", "qbert", "gauntlet", "battlezone", "asteroids", "frogger", "tetris", "joust", "tempest", "rampage"];
+var theWords = ["centipede", "defender", "pacman", "galaga", "burgertime", "qbert", "gauntlet", "battlezone", "asteroids", "frogger", "tetris", "joust", "tempest", "rampage",
+"endgame", "roblox", "mjolnir", "thanos", "avengers", "vision", "hawkeye", "widow", "nebula", "gamora", "starlord", "rocket", "shrek", "spiderman", "ironman",
+"mysterio", "batman", "superman", "heimdall", "joker", "deadpool", "blackspider", "groot", "godzilla", "gidorah", "mothra", "rodan", "gamera", "kingkong",
+"venom", "galactus", "sharkboy", "natsu", "lavagirl", "mikasa", "babyman"];
+
 var randWord = theWords[Math.floor(Math.random() * theWords.length)];
 var answerArray = [];
 
